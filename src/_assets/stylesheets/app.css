@@ -1,6 +1,10 @@
 
 @import 'utils/_tailwind.css';
 @import 'utils/_accessibility.css';
+@import '@simonwep/pickr/dist/themes/nano.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Comfortaa:wght@300&family=Oswald&family=Pacifico&family=Quicksand&family=VT323&family=Indie+Flower&family=Permanent+Marker&display=swap');
+
+
 
 /* purgecss start ignore */
 
@@ -11,6 +15,19 @@
 
 a {
 	@apply text-ws-blue-500 underline;
+}
+
+/* hide input number spinners */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .rocket {
@@ -53,5 +70,53 @@ a {
 		transform: translate(0);
 	}
 }
+
+.badge-editor{font-family:'Comfortaa', sans-serif;}
+.bg-blue-custom{background:#121A2D}
+.pcr-button:after{border:1px solid #ccc;}
+.mh-85{min-height:85vh}
+
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.animated.faster {
+	-webkit-animation-duration: 500ms;
+	animation-duration: 500ms;
+}
+
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+.fadeOut {
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
 
 /* purgecss end ignore */

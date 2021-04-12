@@ -12,9 +12,11 @@
     <link rel="stylesheet" href="/static/app.compiled.css">
     {% endif %}
   </head>
-  <body>
+  <body class="bg-blue-custom">
     <a href="#main" class="skip-link">Skip to main content</a>
+    {% include "../_template-parts/_header.njk" %}
     {{ content | safe }}
+    {% include "../_template-parts/_footer.njk" %}
   </body>
   <script src="/static/app.bundled.js"></script>
 </html>

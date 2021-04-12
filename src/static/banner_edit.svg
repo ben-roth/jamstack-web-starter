@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="332px" height="208px" viewBox="0 0 332 208" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-113.000000, -124.000000)" stroke="#000000">
+            <g id="Group" transform="translate(120.000000, 126.000000)">
+                <path d="M127.405,146 L124.520863,152.91398 L118.011402,203 L1.42108547e-14,203 L23.7503677,174.5 L1.42108547e-14,146 L127.405,146 Z" id="Combined-Shape" stroke-width="6" fill="#ABE5ED"></path>
+                <g id="pencil" transform="translate(117.000000, 0.000000)">
+                    <polygon id="Path-4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="1.01140203 203.291106 7.5208629 152.91398 144.771568 19.614938 186.658526 61.3960134 51.4823868 197.596013"></polygon>
+                    <polygon id="Path-5" fill="#000000" points="-7.10542736e-15 204.17484 4.11715879 180.945667 22.4336166 200.929482"></polygon>
+                    <line x1="7.5208629" y1="152.91398" x2="51.4823868" y2="197.596013" id="Path-6" stroke-width="4"></line>
+                    <line x1="29.5016249" y1="175.254997" x2="162.674171" y2="38.9692194" id="Path-7" stroke-width="4"></line>
+                    <polyline id="Path-8" stroke-width="4" stroke-linejoin="round" points="149.418241 14.8427832 165.435201 -3.55271368e-15 206.014761 41.6147044 190.811402 56.1619932"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,17 +1,138 @@
 ---
 layout: base.njk
-title: Minimal boilerplate for new projects built with Eleventy, Tailwind and PostCSS
+title: Badgy, a badge editor powered by Flair
 ---
 
-<main id="main" class="px-4 max-w-md mx-auto text-center">
-    <img src="/static/icon.svg" alt="Rocket icon" class="w-12 mx-auto my-4 rocket">
-    <h1 class="font-bold text-xl mb-2">Just testing things out, looks good!</h1>
-    <p>This is built with Eleventy, Tailwind, PurgeCSS and PostCSS</p>
+<div id="size-modal" class="flex items-center justify-center fixed left-0 bottom-0 w-full h-full bg-gray-500 z-50 animated fadeIn faster hidden"> 
+  <div class="py-3 sm:max-w-xl sm:mx-auto"> <div class="bg-white min-w-1xl flex flex-col rounded-xl shadow-lg"> 
+    <div class="px-5 pt-5 flex justify-between items-center"> 
+    <h2 class="text-gray-800 text-3xl font-semibold">Choose your image size:</h2> 
+    <div class="modal-close cursor-pointer z-50 close"><svg class="fill-current text-black modal-close" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path class="modal-close" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path></svg></div>
+    </div>
+    <div class="px-5 pb-5"> 
+    <p class="text-gray-600">Your badge will scale to fit inside these dimensions.</p>
+    </div> 
+    <div class="bg-gray-200 w-full flex flex-col items-center"> 
+      <div class="flex flex-col items-center py-6 space-y-3"> 
+        <div class="mb-3 -mx-2 flex items-end ml-2 mr-2"> 
+          <div class="px-2 w-1/2"> 
+            <label for="canvas-width" class="font-bold text-sm mb-2 ml-1">Width</label> 
+            <input autofocus id="canvas-width" class="w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors" placeholder="20" type="text"/> 
+          </div> 
+          <div class="px-2 w-1/2"> 
+            <label for="canvas-height" class="font-bold text-sm mb-2 ml-1">Height</label> 
+            <input id="canvas-height" type="number" class="w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors" placeholder="20" type="text"/> 
+          </div> 
+          </div> 
+          <button id="build-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hidden"> Download Final Badge </button> 
+          <div id="canvas-size-warning" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative ml-2 mr-2 hidden" role="alert"> <span class="block sm:inline">Please make sure you enter whole numbers only for the values of <b>Width</b> and <b>Height</b> above.</span> </div> </div> </div> </div> </div> </div>
 
-   
-    <footer class="text-sm text-gray-500">
-       <p class="flex items-center justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="w-4 mr-1"><path class="fill-current text-gray-100" d="M32 5H4C1.791 5 0 6.791 0 9v18c0 2.209 1.791 4 4 4h28c2.209 0 4-1.791 4-4V9c0-2.209-1.791-4-4-4z"/><path class="fill-current text-ws-blue-500" d="M13 18S0 8.586 0 8.895v18.21C0 27.414 13 18 13 18zm5 3S3.697 31 4.07 31h27.859C32.303 31 18 21 18 21zm5-3s13 9.414 13 9.105V8.895C36 8.586 23 18 23 18zm-5-3S3.697 5 4.07 5h27.859C32.303 5 18 15 18 15z"/></svg> <span>Proudly crafted in Scotland by <a href="https://www.chriscollins.me">Chris Collins</a></span></p>
-        <p>Go and build something great! 🥳</p>
-    </footer>
+<div id="images-modal" class="flex items-center justify-center fixed left-0 bottom-0 w-full h-full bg-gray-500 z-50 animated fadeIn faster hidden"> 
+  <div class="py-3 sm:max-w-xl sm:mx-auto"> <div class="bg-white min-w-1xl flex flex-col rounded-xl shadow-lg"> 
+    <div class="px-5 py-5 flex justify-between items-center"> 
+      <h2 class="text-gray-800 text-3xl font-semibold text-center">Pick a Badge</h2> 
+      <div class="modal-close cursor-pointer z-50 close"><svg class="fill-current text-black modal-close" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path class="modal-close" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path></svg></div>
+    </div> 
+    <div class="bg-gray-200 w-full flex flex-col items-center"> 
+      <div class="flex flex-col items-center py-6 space-y-3"> 
+        <div class="mb-3 -mx-2 flex items-end ml-2 mr-2"> 
+          <img src="./static/badges/badge_2.svg" class="h-12 w-12 ml-2 cursor-pointer" />
+          <img src="./static/badges/badge_3.svg" class="h-12 w-12 ml-2 cursor-pointer" />
+          <img src="./static/badges/badge_4.svg" class="h-12 w-12 ml-2 cursor-pointer" />
+          <img src="./static/badges/badge_5.svg" class="h-12 w-12 ml-2 cursor-pointer" />
+          <img src="./static/badges/badge_6.svg" class="h-12 w-12 ml-2 cursor-pointer" />
+          <img src="./static/badges/badge_7.svg" class="h-12 w-12 ml-2 cursor-pointer" />
+          <img src="./static/badges/badge_8.svg" class="h-12 w-12 ml-2 cursor-pointer" />
+          <img src="./static/badges/badge_9.svg" class="h-12 w-12 ml-2 cursor-pointer" />
+          <img src="./static/badges/badge_10.svg" class="h-12 w-12 ml-2 cursor-pointer" />
+          <img src="./static/badges/badge_11.svg" class="h-12 w-12 ml-2 cursor-pointer" />
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+  </div>
+</div>
+
+<main id="main" class="bg-gray-300 py-4 mh-85">
+
+  <div class="container md:mx-7xl mx-auto my-3">
+    <div class="grid grid-cols-1 md:grid-cols-6">
+
+      <div class="col-span-4">
+        <canvas id="c" width="800" height="500" class="mx-auto shadow-lg"></canvas>
+      </div>
+
+      <div class="col-span-2 border-l-1 ml-2 border-l-2 p-2  bg-white">
+
+        {% include "./_components/font-tools.njk"%}
+
+        <div id="svgTools">
+          <h2 class="text-2xl mb-2">SVG Color</h2>
+          <div class="inline-block flex flex-row mb-2 items-center">
+            <div class="svg-color-picker"></div>
+            <div id="svg-color-hex" class="border c-gray-200 p-1 px-2 ml-1 text-gray-600 text-sm cursor-pointer">
+              <div>#333333</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hr mx-5 my-3 border-b-2"></div>
+        {# <input id="imageUpload" class="" type="file" accept="image/*"> #}
+
+        <div>
+
+    
+    <div class="flex justify-center text-center flex-col">
+    <button id="badgeModal" class="mb-2 cursor-pointer bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Choose your Badge Image</button>
+    <p><strgon>Or</strong></p>
+    </div>
+
+
+
+          <label class="block text-sm font-medium text-gray-700 text-center">
+            Upload a Custom Badge Image
+          </label>
+          <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md" id="drop-area"> 
+            <div class="space-y-1 text-center">
+              <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewbox="0 0 48 48" aria-hidden="true">
+                <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="flex text-sm text-gray-600">
+                <label for="imageUpload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                  <span>Upload a custom badge</span>
+                  <input id="imageUpload" name="imageUpload" type="file" class="sr-only">
+                </label>
+                <p class="pl-1">or drag and drop</p>
+              </div>
+              <p class="text-xs text-gray-500">
+                PNG, JPG, SVG
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hr mx-5 my-3 border-b-2"></div>
+        <div class="flex justify-center">
+          <button id="save-png" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-flex items-center m-2 mx-auto">
+            <svg class="w-4 h-4 mr-2 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+            <span>Download Badge Image</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  {# <button id="save-jpg" class="bg-gray-300 hover:bg-gray-600 text-gray-900 hover:text-white font-bold py-2 px-4 rounded inline-flex items-center m-2">
+  <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+  <span>Download JPEG</span>
+</button> #}
+
+  {# <button id="save-svg" class="bg-gray-300 hover:bg-gray-600 text-gray-900 hover:text-white font-bold py-2 px-4 rounded inline-flex items-center m-2">
+  <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+  <span>Download SVG</span>
+</button> #}
+
 </main>

@@ -1,0 +1,134 @@
+<div id="fontTools">
+  <h2 class="text-2xl mb-2">Font Tools</h2>
+  <label class="ml-1"l>Font Family</label>
+  <div class="relative inline-block w-full text-gray-700 mb-2">
+    <select id="font-family" class="w-full h-10 pl-3 pr-6 text-base placeholder-gray-600 border rounded-lg appearance-none focus:shadow-outline"></select>
+    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+      <svg class="w-4 h-4 fill-current" viewbox="0 0 20 20">
+        <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" fill-rule="evenodd"></path>
+      </svg>
+    </div>
+  </div>
+
+  <div class="inline-block flex flex-row mb-2 items-center">
+    <div class="color-picker"></div>
+    <div id="color-hex" class="border c-gray-200 p-1 px-2 ml-1 text-gray-600 text-sm cursor-pointer">
+      <div>#333333</div>
+    </div>
+
+    <div class="relative text-gray-700">
+      <select id="fontSize" class="ml-2 h-8 pl-3 pr-6 text-base placeholder-gray-600 border rounded-m appearance-none focus:shadow-outline">
+        <option value="8">8</option>
+        <option value="10">10</option>
+        <option value="12">12</option>
+        <option value="14">14</option>
+        <option value="16">16</option>
+        <option value="18">18</option>
+        <option value="20">20</option>
+        <option value="22" selected>Font Size</option>
+        <option value="24">24</option>
+        <option value="28">28</option>
+        <option value="32">32</option>
+        <option value="36">36</option>
+        <option value="45">45</option>
+        <option value="50">50</option>
+        <option value="60">60</option>
+        <option value="75">75</option>
+        <option value="100">100</option>
+        <option value="125">125</option>
+        <option value="150">150</option>
+        <option value="200">200</option>
+      </select>
+      <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+        <svg class="w-4 h-4 fill-current" viewbox="0 0 20 20">
+          <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" fill-rule="evenodd"></path>
+        </svg>
+      </div>
+    </div>
+
+    <div class="ml-2">
+      <svg fill="#333333" class="h-6 w-6" data-name="Capa 1" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: none;
+              stroke: #333333;
+              stroke-miterlimit: 10;
+              stroke-width: 5px;
+            }
+          </style>
+        </defs>
+        <title>Line Height</title>
+        <path d="M92,28H27a3,3,0,0,1,0-6H92a3,3,0,0,1,0,6Z"/>
+        <path d="M92,45H27a3,3,0,0,1,0-6H92a3,3,0,0,1,0,6Z"/>
+        <path d="M92,78H27a3,3,0,0,1,0-6H92a3,3,0,0,1,0,6Z"/>
+        <path d="M92,62H27a3,3,0,0,1,0-6H92a3,3,0,0,1,0,6Z"/>
+        <path d="M57.16,95H26.84a3,3,0,0,1,0-6H57.16a3,3,0,0,1,0,6Z"/>
+        <path d="M92,11H27a3,3,0,0,1,0-6H92a3,3,0,0,1,0,6Z"/>
+        <line class="cls-1" x1="12.25" x2="12.25" y1="19.92" y2="79.58"/>
+        <polygon points="2.99 26.95 12.25 23.01 21.51 26.95 12.25 5"/>
+        <polygon points="2.99 72.56 12.25 76.49 21.51 72.56 12.25 94.5"/>
+      </svg>
+
+    </div>
+
+    <div class="relative text-gray-700">
+      <select id="lineHeight" class="ml-1 h-8 pl-3 pr-6 text-base placeholder-gray-600 border rounded-m appearance-none focus:shadow-outline">
+        <option value="-1">-1</option>
+        <option value="-.5">-.5</option>
+        <option value="-.25">-0.25</option>
+        <option value="0.25">0.25</option>
+        <option value="0.5">0.5</option>
+        <option value="0.75">0.75</option>
+        <option value="1" selected>Line Height</option>
+        <option value="1.25">1.25</option>
+        <option value="1.5">1.5</option>
+        <option value="2">2</option>
+        <option value="2.5">2.5</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+        <svg class="w-4 h-4 fill-current" viewbox="0 0 20 20">
+          <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" fill-rule="evenodd"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="inline-block flex flex-row mb-2 items-center">
+    <div>
+<svg class="w-8 h-8" fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1" x="0px" y="0px"><title>Letter Spacing</title><desc>Powered By Flair</desc><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M20.2928932,17 L2.70710678,17 L4.85355339,19.1464466 C5.04881554,19.3417088 5.04881554,19.6582912 4.85355339,19.8535534 C4.65829124,20.0488155 4.34170876,20.0488155 4.14644661,19.8535534 L1.14644661,16.8535534 C0.951184464,16.6582912 0.951184464,16.3417088 1.14644661,16.1464466 L4.14644661,13.1464466 C4.34170876,12.9511845 4.65829124,12.9511845 4.85355339,13.1464466 C5.04881554,13.3417088 5.04881554,13.6582912 4.85355339,13.8535534 L2.70710678,16 L20.2928932,16 L18.1464466,13.8535534 C17.9511845,13.6582912 17.9511845,13.3417088 18.1464466,13.1464466 C18.3417088,12.9511845 18.6582912,12.9511845 18.8535534,13.1464466 L21.8535534,16.1464466 C22.0488155,16.3417088 22.0488155,16.6582912 21.8535534,16.8535534 L18.8535534,19.8535534 C18.6582912,20.0488155 18.3417088,20.0488155 18.1464466,19.8535534 C17.9511845,19.6582912 17.9511845,19.3417088 18.1464466,19.1464466 L20.2928932,17 L20.2928932,17 Z M19.4427152,8.26739642 C19.4459551,8.27355014 19.4490704,8.27977965 19.4520578,8.28608158 L20.9472136,11.2763932 C21.0707082,11.5233825 20.970596,11.823719 20.7236068,11.9472136 C20.4766175,12.0707082 20.176281,11.970596 20.0527864,11.7236068 L18.690983,9 L14.309017,9 L12.9472136,11.7236068 C12.823719,11.970596 12.5233825,12.0707082 12.2763932,11.9472136 C12.029404,11.823719 11.9292918,11.5233825 12.0527864,11.2763932 L13.5479422,8.28608168 C13.5509296,8.27977965 13.5540449,8.27355014 13.5572848,8.26739642 L16.0527864,3.2763932 C16.2370485,2.90786893 16.7629515,2.90786893 16.9472136,3.2763932 L19.4427152,8.26739641 L19.4427152,8.26739642 Z M14.809017,8 L18.190983,8 L16.5,4.61803399 L14.809017,8 Z M6.5,10.381966 L10.0527864,3.2763932 C10.176281,3.02940395 10.4766175,2.92929178 10.7236068,3.0527864 C10.970596,3.17628103 11.0707082,3.47661755 10.9472136,3.7236068 L6.9472136,11.7236068 C6.76295146,12.0921311 6.23704854,12.0921311 6.0527864,11.7236068 L2.0527864,3.7236068 C1.92929178,3.47661755 2.02940395,3.17628103 2.2763932,3.0527864 C2.52338245,2.92929178 2.82371897,3.02940395 2.9472136,3.2763932 L6.5,10.381966 Z" fill="#000000" fill-rule="nonzero"></path></g></svg>
+</div>
+    <div class="relative text-gray-700">
+      <select id="letterSpacing" class="ml-1 h-8 pl-3 pr-6 text-base placeholder-gray-600 border rounded-m appearance-none focus:shadow-outline">
+        <option value="-500">-.5</option>
+        <option value="-250">-0.25</option>
+        <option value="-200">-0.2</option>
+        <option value="-100">-0.1</option>
+        <option value="0" selected>Letter Spacing</option>
+        <option value="100">0.1</option>
+        <option value="200">0.2</option>
+        <option value="250">0.25</option>
+        <option value="500">0.5</option>
+        <option value="1000">1</option>
+        <option value="1250">1.25</option>
+        <option value="1500">1.5</option>
+      </select>
+      <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+        <svg class="w-4 h-4 fill-current" viewbox="0 0 20 20">
+          <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" fill-rule="evenodd"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="moreText">
+  <button class="cursor-pointer bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">additional text <span>+</span></button>
+</div>
+
+  <div class="hr mx-3 my-3 border-b-2"></div>
